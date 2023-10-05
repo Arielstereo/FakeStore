@@ -9,10 +9,10 @@ const Details = () => {
 
   const param = useParams()
 
-  const API = import.meta.env.VITE_URL
+  // const API = import.meta.env.VITE_URL
 
   useEffect(() => {
-    fetch(`${API}/products/${param.id}`)
+    fetch(`https://fakestoreapi.com/products/${param.id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
   }, [])
